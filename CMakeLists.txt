@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.9.0)
-project(Snail)
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/CMakePCHCompiler)
-SET(MSVC TRUE)
-
+MESSAGE(${CMAKE_SOURCE_DIR})
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMake/CMakePCHCompiler)
+project(Snail CXX CXXPCH)
 add_subdirectory(src)
