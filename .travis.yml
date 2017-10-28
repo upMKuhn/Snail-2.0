@@ -3,6 +3,12 @@
 language:
   - cpp
 
+addons:
+  apt:
+    packages:
+      - "python3"
+      - "python3-pip"
+
 # Container-based infrastructure (Linux)
 # * https://docs.travis-ci.com/user/migrating-from-legacy/#How-can-I-use-container-based-infrastructure%3F
 sudo:
@@ -53,8 +59,6 @@ matrix:
     #   env: CONFIG=Debug TOOLCHAIN=sanitize-thread
 
     # }
-
-    
 
 install:
   # Info about OS
