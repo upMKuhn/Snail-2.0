@@ -20,13 +20,6 @@ environment:
       CONFIG: Debug
 
     ###
-    - TOOLCHAIN: "nmake-vs-14-2015-win64"
-      CONFIG: Release
-
-    - TOOLCHAIN: "nmake-vs-14-2015-win64"
-      CONFIG: Debug
-
-    ###
     - TOOLCHAIN: "nmake-vs-14-2015"
       CONFIG: Release
 
