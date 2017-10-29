@@ -1,5 +1,6 @@
 
 # Windows (https://github.com/travis-ci-tester/toolchain-table)
+image: Visual Studio 2017
 
 environment:
   matrix:
