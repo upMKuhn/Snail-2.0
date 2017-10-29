@@ -4,42 +4,19 @@ image: Visual Studio 2017
 
 environment:
   matrix:
-    ###
-
-    # 'default' toolchain is the same as 'vs-14-2015'
-    # - TOOLCHAIN: "default"
-    #   CONFIG: Release
-
-    # - TOOLCHAIN: "default"
-    #   CONFIG: Debug
-
-    ###
-    - TOOLCHAIN: "ninja-vs-14-2015-win64"
-      CONFIG: Release
-
-    - TOOLCHAIN: "ninja-vs-14-2015-win64"
-      CONFIG: Debug
-
-    ###
-    - TOOLCHAIN: "nmake-vs-14-2015"
-      CONFIG: Release
-
-    - TOOLCHAIN: "nmake-vs-14-2015"
-      CONFIG: Debug
-
   
-    ###
-    - TOOLCHAIN: "vs-14-2015"
+  ###
+    - TOOLCHAIN: "vs-15-2017"
       CONFIG: Release
 
-    - TOOLCHAIN: "vs-14-2015"
+    - TOOLCHAIN: "vs-15-2017"
       CONFIG: Debug
 
     ###
-    - TOOLCHAIN: "vs-14-2015-win64"
+    - TOOLCHAIN: "vs-15-2017-win64"
       CONFIG: Release
 
-    - TOOLCHAIN: "vs-14-2015-win64"
+    - TOOLCHAIN: "vs-15-2075-win64"
       CONFIG: Debug
 
 install:
