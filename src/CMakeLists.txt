@@ -5,4 +5,3 @@ file(GLOB CORE_SRC
 add_subdirectory (core)
 target_precompiled_header(core/prefix.h)
 
-
