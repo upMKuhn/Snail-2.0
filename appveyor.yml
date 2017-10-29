@@ -16,7 +16,7 @@ environment:
     - TOOLCHAIN: "vs-15-2017-win64"
       CONFIG: Release
 
-    - TOOLCHAIN: "vs-15-2075-win64"
+    - TOOLCHAIN: "vs-15-2017-win64"
       CONFIG: Debug
 
 install:
