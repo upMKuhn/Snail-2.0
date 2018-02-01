@@ -19,6 +19,7 @@
 
 # Build directories
 _builds*
+.CMakeFiles*
 
 
 # User-specific files
