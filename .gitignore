@@ -23,6 +23,12 @@
 
 # Build directories
 _builds*
+Makefile
+.vscode
+CMakeCache.txt
+_3rdParty/
+*.cmake
+CMakeFiles/
 
 
 # User-specific files
