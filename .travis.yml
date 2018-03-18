@@ -48,6 +48,10 @@ matrix:
     - os: linux
       env: CONFIG=Debug TOOLCHAIN=sanitize-thread
 
+    #Emscripten
+    - os: linux
+      env: CONFIG=Release TOOLCHAIN=emscripten-cxx11
+
     # }
 
 install:

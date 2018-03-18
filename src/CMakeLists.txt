@@ -3,5 +3,4 @@ file(GLOB CORE_SRC
     "*.cpp"
 )
 add_subdirectory (core)
-target_precompiled_header(core/prefix.h)
 

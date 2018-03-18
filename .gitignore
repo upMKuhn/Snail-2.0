@@ -3,6 +3,10 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+*CMakeFiles/
+*_3rdParty/
+
+
 # Compiled Object files
 *.slo
 *.lo
@@ -305,3 +309,4 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+.vscode/launch.json
