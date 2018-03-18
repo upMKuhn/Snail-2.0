@@ -5,7 +5,7 @@ HunterGate(
     URL "https://github.com/ruslo/hunter/archive/v0.20.24.tar.gz"
     SHA1 "3e2037a462bcf2ec3440f60298d933e74ffd4df3"
 )
-set(HUNTER_STATUS_DEBUG OFF)
+set(HUNTER_STATUS_DEBUG ON)
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
