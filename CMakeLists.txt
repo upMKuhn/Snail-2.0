@@ -16,10 +16,12 @@ project(Snail)
 
 
 #Dependencies
-hunter_add_package(SDL_image)
-find_package(SDL_image CONFIG REQUIRED)
+
 
 hunter_add_package(SDL2)
 find_package(SDL2 CONFIG REQUIRED)
+
+hunter_add_package(SDL_image)
+find_package(SDL_image CONFIG REQUIRED)
 
 add_subdirectory(src) 
