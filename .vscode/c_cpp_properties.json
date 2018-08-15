@@ -6,8 +6,8 @@
                 "/usr/include/linux",
                 "/usr/include",
                 "/usr/local/include",
-                "${workspaceRoot}",
-                "/home/martin/.hunter/_Base/3e2037a/7f32107/e69837d/Install/include",
+                "~/.hunter/_Base/3e2037a/079f3f2/e69837d/Install/include",
+                "${workspaceRoot}/src",
                 "/usr/include/x86_64-linux-gnu",
                 "/usr/include/c++/5.4.0",
                 "/usr/include/x86_64-linux-gnu/c++/5",
@@ -19,12 +19,17 @@
                 "path": [
                     "/usr/include",
                     "/usr/local/include",
-                    "${workspaceRoot}"
+                    "${workspaceRoot}/src",
+                    "~/.hunter/_Base/3e2037a/079f3f2/e69837d/Install/include"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
-            }
+            },
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
         }
     ],
-    "version": 3
+    "version": 4
 }
