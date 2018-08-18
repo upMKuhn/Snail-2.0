@@ -7,3 +7,5 @@
 * CMake
 * Hunter
 * CMakePCHCompiler
+
+install package on linux: libgl1-mesa-dev

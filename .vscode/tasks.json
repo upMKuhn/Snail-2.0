@@ -6,7 +6,11 @@
         {
             "label": "build debug",
             "type": "shell",
-            "command": "cmake -DCMAKE_BUILD_TYPE=Debug && make clean && make"
+            "command": "cmake -DCMAKE_BUILD_TYPE=Debug && make clean && make",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
