@@ -26,7 +26,12 @@ hunter_add_package(SDL_image)
 find_package(SDL_image CONFIG REQUIRED)
 
 find_package (OpenGL REQUIRED)
+
 hunter_add_package(glew)
 find_package(glew CONFIG REQUIRED)
+
+hunter_add_package(glm)
+find_package(glm CONFIG REQUIRED)
+
 
 add_subdirectory(src) 

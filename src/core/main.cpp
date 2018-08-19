@@ -1,7 +1,10 @@
 #include "main.h"
 #include <iostream>
 #include <GL/glew.h>
+#include <glm/glm.hpp>
 #include <rendering/OpenGLShader.h>
+#include <rendering/Mesh.h>
+#include <rendering/Vertex.h>
 #define SCREEN_WIDTH 640
 #define SCREEN_HEIGHT 480
 
@@ -29,8 +32,21 @@ int static doSDL() {
 int main(int argc, char *argv[]) {
     IDisplay display(640, 480, "hello");
     OpenGLShader shader("./res/basicShader");
+
+    Vertex vertecies[] = {
+        Vertex(glm::vec3(-0.5, -0.5, 0)),
+        Vertex(glm::vec3(0, 0.5, 0)),
+        Vertex(glm::vec3(0.5, -0.5, 0))
+    };
+
+    Mesh mesh(vertecies, sizeof(vertecies)/sizeof(vertecies[0]));
+
     while(!display.isClosed()) {
         display.clear(0.0f, 0.15f, 0.3f, 1.0f);
+
+        shader.bindShader();
+        mesh.Draw();
+
 
         display.update();
     }
