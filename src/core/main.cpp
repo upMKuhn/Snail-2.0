@@ -33,6 +33,8 @@ int main(int argc, char *argv[]) {
 
     while(!display.isClosed()) {
         display.clear(0.0f, 0.15f, 0.3f, 1.0f);
+        transform.getPos().x = sinf(counter);
+        transform.getRot().x = counter*5;
 
         shader.bindShader();
         shader.update(transform, camera);
@@ -40,7 +42,7 @@ int main(int argc, char *argv[]) {
         wall.bind(0);
 
         display.update();
-        counter += 0.001f;
+        counter += 0.01f;
     }
     return 0;
 }
