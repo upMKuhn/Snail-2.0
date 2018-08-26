@@ -12,28 +12,30 @@ OpenGLShader::OpenGLShader(const std::string& filename) {
         glAttachShader(m_program, m_shaders[i]);
 
     glBindAttribLocation(m_program, 0, "position");
-
+    glBindAttribLocation(m_program, 1, "textureCoords");
+    
     glLinkProgram(m_program);
     this->checkShaderError(m_program, GL_LINK_STATUS, true, "ERROR: Program linking failed:  ");
 
     glValidateProgram(m_program);
     this->checkShaderError(m_program, GL_VALIDATE_STATUS, true, "ERROR: Program is invalid:  ");
+
+    m_uniforms[TRANSFORM_U] = glGetUniformLocation(m_program, "transform");
 }
 
-OpenGLShader::~OpenGLShader() {
-    for(unsigned int i = 0; i < NUM_SHADERS; i++){
-        glDetachShader(m_program, m_shaders[i]);
-        glDeleteShader(m_shaders[i]);
-    }    
-
-    glDeleteProgram(m_program);
-}
 
 
 void OpenGLShader::bindShader() {
     glUseProgram(m_program);
 }
 
+
+void OpenGLShader::update(const Transform& transform, const Camera& camera) {
+
+    glm::mat4 mvp = transform.getModelViewProjection(camera);
+
+    glUniformMatrix4fv(m_uniforms[TRANSFORM_U], 1, GL_FALSE, &mvp[0][0]);
+}
 
 std::string OpenGLShader::loadShader(const std::string& fileName)
 {
@@ -97,4 +99,13 @@ GLuint OpenGLShader::createShader(const std::string& src, GLenum shaderType) {
     this->checkShaderError(shader, GL_COMPILE_STATUS, false, "Error: shader compilation failed: ");
 
     return shader;
+}
+
+OpenGLShader::~OpenGLShader() {
+    for(unsigned int i = 0; i < NUM_SHADERS; i++){
+        glDetachShader(m_program, m_shaders[i]);
+        glDeleteShader(m_shaders[i]);
+    }    
+
+    glDeleteProgram(m_program);
 }

@@ -1,4 +1,15 @@
 {
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.cmake": true,
+        "**/Makefile": true,
+        "**/CMakeFiles**": true,
+        "**/CMake**": true,
+    },
     "files.associations": {
         "iostream": "cpp",
         "*.tcc": "cpp",
@@ -33,7 +44,15 @@
         "thread": "cpp",
         "cinttypes": "cpp",
         "tuple": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "string": "cpp",
+        "cstddef": "cpp",
+        "cstring": "cpp",
+        "fstream": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "optional": "cpp",
+        "sstream": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "C_Cpp.intelliSenseEngineFallback": "Disabled"

@@ -12,6 +12,8 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
+set (CMAKE_CXX_STANDARD 14)
+
 
 project(Snail)
 
@@ -33,5 +35,7 @@ find_package(glew CONFIG REQUIRED)
 hunter_add_package(glm)
 find_package(glm CONFIG REQUIRED)
 
+hunter_add_package(Assimp)
+find_package(Assimp CONFIG REQUIRED)
 
 add_subdirectory(src) 
