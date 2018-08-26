@@ -24,7 +24,6 @@ matrix:
       env: CONFIG=Release TOOLCHAIN=default
     - os: linux
       env: CONFIG=Debug TOOLCHAIN=default
-
     - os: linux
       env: CONFIG=Release TOOLCHAIN=gcc
     - os: linux
@@ -82,6 +81,7 @@ install:
   - export ANDROID_NDK_r10e="`pwd`/_ci/android-ndk-r10e"
 
 script:
+  - cmake .
   - build.py --toolchain ${TOOLCHAIN} --config ${CONFIG} --verbose --test
 
 branches:

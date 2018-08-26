@@ -8,7 +8,9 @@
         "**/*.cmake": true,
         "**/Makefile": true,
         "**/CMakeFiles**": true,
-        "**/CMake**": true,
+        "**/CMakeCache**": true,
+        "**/CMake/**": true,
+        "**/build/**": true,
     },
     "files.associations": {
         "iostream": "cpp",
